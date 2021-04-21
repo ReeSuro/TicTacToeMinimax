@@ -1,0 +1,13 @@
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.exe
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.deps.json
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.runtimeconfig.json
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.runtimeconfig.dev.json
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.dll
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\bin\Debug\netcoreapp3.1\TicTacToeModelTest.pdb
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.csprojAssemblyReference.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.AssemblyInfoInputs.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.AssemblyInfo.cs
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.csproj.CoreCompileInputs.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.dll
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.pdb
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeModelTest\obj\Debug\netcoreapp3.1\TicTacToeModelTest.genruntimeconfig.cache

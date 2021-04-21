@@ -1,0 +1,10 @@
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.csprojAssemblyReference.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.Properties.Resources.resources
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.csproj.GenerateResource.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.csproj.CoreCompileInputs.cache
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\bin\Debug\TicTacToeMinimax.exe.config
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\bin\Debug\TicTacToeMinimax.exe
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\bin\Debug\TicTacToeMinimax.pdb
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.exe
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.pdb
+E:\2021\UNI\AI\TicTacToeMinimax\TicTacToeMinimax\obj\Debug\TicTacToeMinimax.Form1.resources
