@@ -31,6 +31,10 @@ namespace TicTacToeMinimax
         {
             this.MainLabel = new System.Windows.Forms.Label();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Tile9 = new System.Windows.Forms.Button();
             this.Tile8 = new System.Windows.Forms.Button();
             this.Tile7 = new System.Windows.Forms.Button();
@@ -55,10 +59,6 @@ namespace TicTacToeMinimax
             this.Player1Combo = new System.Windows.Forms.ComboBox();
             this.Player2Label = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.GamePanel.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MultipleGamesNumericSelect)).BeginInit();
@@ -98,6 +98,42 @@ namespace TicTacToeMinimax
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(400, 400);
             this.GamePanel.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(3, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(400, 5);
+            this.label4.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(-2, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(400, 5);
+            this.label3.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(260, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(5, 403);
+            this.label2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(133, -5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(5, 403);
+            this.label1.TabIndex = 10;
             // 
             // Tile9
             // 
@@ -240,9 +276,24 @@ namespace TicTacToeMinimax
             // MultipleGamesNumericSelect
             // 
             this.MultipleGamesNumericSelect.Location = new System.Drawing.Point(152, 354);
+            this.MultipleGamesNumericSelect.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MultipleGamesNumericSelect.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.MultipleGamesNumericSelect.Name = "MultipleGamesNumericSelect";
             this.MultipleGamesNumericSelect.Size = new System.Drawing.Size(91, 20);
             this.MultipleGamesNumericSelect.TabIndex = 13;
+            this.MultipleGamesNumericSelect.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // MultipleGamesCheck
             // 
@@ -350,42 +401,6 @@ namespace TicTacToeMinimax
             this.ResultLabel.Size = new System.Drawing.Size(117, 20);
             this.ResultLabel.TabIndex = 9;
             this.ResultLabel.Text = "Player 1 Wins";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(133, -5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(5, 403);
-            this.label1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(260, -2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(5, 403);
-            this.label2.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(-2, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 5);
-            this.label3.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(3, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(400, 5);
-            this.label4.TabIndex = 13;
             // 
             // Form1
             // 

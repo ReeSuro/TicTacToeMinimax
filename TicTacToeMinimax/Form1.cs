@@ -19,6 +19,12 @@ namespace TicTacToeMinimax
         bool isPlayer1Turn;
         Task GameTask;
         CancellationTokenSource tokenSource;
+        int numberofGames;
+        int totalP1Wins;
+        int totalP2Wins;
+        int totalDraws;
+        int totalGames;
+        int currentTotalGames;
 
         public Form1()
         {
@@ -56,7 +62,7 @@ namespace TicTacToeMinimax
             Player1NumericSelect.Value = 1;
             Player2NumericSelect.Value = 1;
             MultipleGamesNumericSelect.Enabled = false;
-
+            MultipleGamesCheck.Enabled = false;
             StartButton.Enabled = true;
             MultipleGamesCheck.Checked = false;
             isPlayer1Turn = true;
@@ -309,15 +315,26 @@ namespace TicTacToeMinimax
             }
             //Create cancellation tokens in case game is reset
             tokenSource = new CancellationTokenSource();
+            //Run multiple games if selected
             CancellationToken cancelToken = tokenSource.Token;
             //Progress object handles the updating of GUI elements
             Progress<int> progress = new Progress<int>(UpdateGame);
             Game = new TicTacToeGame(Player1, Player2, progress, cancelToken);
-           
-                
+
             //Start the game thread running
             GameTask = new Task(Game.Run, cancelToken);
             GameTask.Start();
+
+            //Enable running multiple games
+            if (MultipleGamesCheck.Checked) {
+
+                totalDraws = 0;
+                totalP1Wins = 0;
+                totalP2Wins = 0;
+                currentTotalGames = 0;
+                totalGames = (int)MultipleGamesNumericSelect.Value;
+                ResetButton.Enabled = false;
+            }
         }
 
         public void UpdateGame(int state) {
@@ -400,15 +417,49 @@ namespace TicTacToeMinimax
             if (state == 1)
             {
                 ResultLabel.Text = "Player 1 Wins!";
+                totalP1Wins++;
             }
             else if (state == 2) {
                
                 ResultLabel.Text = "Player 2 Wins!";
+                totalP2Wins++;
             }
             else if (state == 3)
             {
                 ResultLabel.Text = "Draw!";
+                totalDraws++;
             }
+            //update game values
+            currentTotalGames++;
+
+
+
+            if (currentTotalGames < totalGames)
+            {
+               Progress<int> progress;
+               this.tokenSource = new CancellationTokenSource();
+                CancellationToken cancelToken = tokenSource.Token;
+                progress = new Progress<int>(UpdateGame);
+                Game = new TicTacToeGame(Player1, Player2, progress, cancelToken);
+                //Start the game thread running
+                GameTask = new Task(Game.Run, cancelToken);
+                GameTask.Start();
+            }
+            else 
+            {
+                ReportResults();
+                ResetButton.Enabled = true;
+            }
+        }
+
+        private void ReportResults() {
+
+            Console.WriteLine("Games Ran : " + currentTotalGames);
+            Console.WriteLine("Player 1 type: " + Player1.GetType().Name);
+            Console.WriteLine("Player 1 wins: " + totalP1Wins);
+            Console.WriteLine("Player 2 type: " + Player2.GetType().Name);
+            Console.WriteLine("Player 2 wins: " + totalP2Wins);
+            Console.WriteLine("Total Draws: " + totalDraws);
         }
 
         private void ResetButton_Click(object sender, EventArgs e)
@@ -452,7 +503,7 @@ namespace TicTacToeMinimax
             Player1NumericSelect.Value = 0;
             Player2NumericSelect.Value = 0;
             MultipleGamesNumericSelect.Enabled = false;
-            MultipleGamesNumericSelect.Value = 0;
+            MultipleGamesNumericSelect.Value = 1;
             ResetButton.Enabled = false;
             MultipleGamesCheck.Checked = false;
         }
@@ -470,6 +521,23 @@ namespace TicTacToeMinimax
                     Player1NumericSelect.Enabled = false;
                 }
             }
+
+            //Enable multiple games when bots are selected 
+            if (Player1Combo.SelectedIndex != -1 && Player2Combo.SelectedIndex != -1)
+            {
+                if ((string)Player1Combo.Items[Player1Combo.SelectedIndex] != "Human")
+                { 
+                    if ((string)Player2Combo.Items[Player2Combo.SelectedIndex] != "Human")
+                    {
+                        MultipleGamesCheck.Enabled = true;
+                    }
+                }
+                else
+                {
+                    MultipleGamesCheck.Enabled = false;
+                }
+            }
+           
         }
 
         private void Player2Combo_SelectedIndexChanged(object sender, EventArgs e)
@@ -484,6 +552,23 @@ namespace TicTacToeMinimax
                 else
                 {
                     Player2NumericSelect.Enabled = false;
+                }
+
+
+                //Enable multiple games when bots are selected 
+                if (Player1Combo.SelectedIndex != -1 && Player2Combo.SelectedIndex != -1)
+                {
+                    if ((string)Player2Combo.Items[Player2Combo.SelectedIndex] != "Human")
+                    {
+                        if ((string)Player1Combo.Items[Player1Combo.SelectedIndex] != "Human")
+                        {
+                                MultipleGamesCheck.Enabled = true;                            
+                        }
+                    }
+                    else
+                    {
+                        MultipleGamesCheck.Enabled = false;
+                    }
                 }
             }
         }
