@@ -34,14 +34,24 @@ namespace TicTacToeMinimax
             //Read child nodes' scores and select the maximum to play
             int maxScoreIndex = -1;
             int maxScore = -100;
+            List<int> selectionNodes = new List<int>(topNode.ChildNodes.Count);
             for (int i = 0; i < topNode.ChildNodes.Count; i++)
             {
                 if (topNode.ChildNodes[i].Score > maxScore)
                 {
-                    maxScoreIndex = i;
+                    selectionNodes.Clear();
+                    selectionNodes.Add(i);
                     maxScore = topNode.ChildNodes[i].Score;
                 }
+                else if (topNode.ChildNodes[i].Score == maxScore)
+                {
+                    //To give variation, there is a random chance a different child with the same value will be chosen
+                    selectionNodes.Add(i);
+                }
             }
+            //Pick random element from the list 
+            Random random = new Random();
+            maxScoreIndex = selectionNodes.ElementAt<int>(random.Next(selectionNodes.Count));
 
             //Return the board to be played.
             char[,] returnValue = topNode.ChildNodes.ElementAt<DepthLimitedTreeNode>(maxScoreIndex).GameBoard;
