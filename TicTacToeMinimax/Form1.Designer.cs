@@ -55,6 +55,10 @@ namespace TicTacToeMinimax
             this.Player1Combo = new System.Windows.Forms.ComboBox();
             this.Player2Label = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.GamePanel.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MultipleGamesNumericSelect)).BeginInit();
@@ -77,6 +81,10 @@ namespace TicTacToeMinimax
             this.GamePanel.BackColor = System.Drawing.SystemColors.Control;
             this.GamePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.GamePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.GamePanel.Controls.Add(this.label4);
+            this.GamePanel.Controls.Add(this.label3);
+            this.GamePanel.Controls.Add(this.label2);
+            this.GamePanel.Controls.Add(this.label1);
             this.GamePanel.Controls.Add(this.Tile9);
             this.GamePanel.Controls.Add(this.Tile8);
             this.GamePanel.Controls.Add(this.Tile7);
@@ -93,83 +101,101 @@ namespace TicTacToeMinimax
             // 
             // Tile9
             // 
+            this.Tile9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile9.Location = new System.Drawing.Point(276, 283);
             this.Tile9.Name = "Tile9";
             this.Tile9.Size = new System.Drawing.Size(100, 100);
             this.Tile9.TabIndex = 8;
-            this.Tile9.UseVisualStyleBackColor = true;
+            this.Tile9.UseVisualStyleBackColor = false;
             this.Tile9.Click += new System.EventHandler(this.Tile9_Click);
             // 
             // Tile8
             // 
+            this.Tile8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile8.Location = new System.Drawing.Point(149, 283);
             this.Tile8.Name = "Tile8";
             this.Tile8.Size = new System.Drawing.Size(100, 100);
             this.Tile8.TabIndex = 7;
-            this.Tile8.UseVisualStyleBackColor = true;
+            this.Tile8.UseVisualStyleBackColor = false;
             this.Tile8.Click += new System.EventHandler(this.Tile8_Click);
             // 
             // Tile7
             // 
+            this.Tile7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile7.Location = new System.Drawing.Point(20, 283);
             this.Tile7.Name = "Tile7";
             this.Tile7.Size = new System.Drawing.Size(100, 100);
             this.Tile7.TabIndex = 6;
-            this.Tile7.UseVisualStyleBackColor = true;
+            this.Tile7.UseVisualStyleBackColor = false;
             this.Tile7.Click += new System.EventHandler(this.Tile7_Click);
             // 
             // Tile6
             // 
+            this.Tile6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile6.Location = new System.Drawing.Point(276, 148);
             this.Tile6.Name = "Tile6";
             this.Tile6.Size = new System.Drawing.Size(100, 100);
             this.Tile6.TabIndex = 5;
-            this.Tile6.UseVisualStyleBackColor = true;
+            this.Tile6.UseVisualStyleBackColor = false;
             this.Tile6.Click += new System.EventHandler(this.Tile6_Click);
             // 
             // Tile5
             // 
+            this.Tile5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile5.Location = new System.Drawing.Point(149, 148);
             this.Tile5.Name = "Tile5";
             this.Tile5.Size = new System.Drawing.Size(100, 100);
             this.Tile5.TabIndex = 4;
-            this.Tile5.UseVisualStyleBackColor = true;
+            this.Tile5.UseVisualStyleBackColor = false;
             this.Tile5.Click += new System.EventHandler(this.Tile5_Click);
             // 
             // Tile4
             // 
+            this.Tile4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile4.Location = new System.Drawing.Point(20, 148);
             this.Tile4.Name = "Tile4";
             this.Tile4.Size = new System.Drawing.Size(100, 100);
             this.Tile4.TabIndex = 3;
-            this.Tile4.UseVisualStyleBackColor = true;
+            this.Tile4.UseVisualStyleBackColor = false;
             this.Tile4.Click += new System.EventHandler(this.Tile4_Click);
             // 
             // Tile3
             // 
+            this.Tile3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile3.Location = new System.Drawing.Point(276, 14);
             this.Tile3.Name = "Tile3";
             this.Tile3.Size = new System.Drawing.Size(100, 100);
             this.Tile3.TabIndex = 2;
-            this.Tile3.UseVisualStyleBackColor = true;
+            this.Tile3.UseVisualStyleBackColor = false;
             this.Tile3.Click += new System.EventHandler(this.Tile3_Click);
             // 
             // Tile2
             // 
+            this.Tile2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile2.Location = new System.Drawing.Point(149, 14);
             this.Tile2.Name = "Tile2";
             this.Tile2.Size = new System.Drawing.Size(100, 100);
             this.Tile2.TabIndex = 1;
-            this.Tile2.UseVisualStyleBackColor = true;
+            this.Tile2.UseVisualStyleBackColor = false;
             this.Tile2.Click += new System.EventHandler(this.Tile2_Click);
             // 
             // Tile1
             // 
+            this.Tile1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tile1.Location = new System.Drawing.Point(20, 14);
             this.Tile1.Name = "Tile1";
             this.Tile1.Size = new System.Drawing.Size(100, 100);
             this.Tile1.TabIndex = 0;
-            this.Tile1.UseVisualStyleBackColor = true;
+            this.Tile1.UseVisualStyleBackColor = false;
             this.Tile1.Click += new System.EventHandler(this.Tile1_Click);
             // 
             // Player1Label
@@ -325,6 +351,42 @@ namespace TicTacToeMinimax
             this.ResultLabel.TabIndex = 9;
             this.ResultLabel.Text = "Player 1 Wins";
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(133, -5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(5, 403);
+            this.label1.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(260, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(5, 403);
+            this.label2.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(-2, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(400, 5);
+            this.label3.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(3, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(400, 5);
+            this.label4.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +438,10 @@ namespace TicTacToeMinimax
         private System.Windows.Forms.ComboBox Player2Combo;
         private System.Windows.Forms.ComboBox Player1Combo;
         private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

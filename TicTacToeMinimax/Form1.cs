@@ -338,7 +338,7 @@ namespace TicTacToeMinimax
             if (state != 0) {
                 EndGame(state);
             }
-            if (!Game.isPlayer1Turn)
+            if (!isPlayer1Turn)
             {
                 if (Player1.GetType().Name == "HumanPlayer")
                 {
