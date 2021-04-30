@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepthLimitedTreeNode.cs" />
+    <Compile Include="TreeNode.cs" />
+    <Compile Include="DepthSearchPlayer.cs" />
+    <Compile Include="FullTreePlayer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

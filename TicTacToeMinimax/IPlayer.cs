@@ -8,6 +8,6 @@ namespace TicTacToeMinimax
 {
     interface IPlayer
     {
-       // char[,] Move(char[,] gameBoard);
+       char[,] Decision(char[,] gameBoard);
     }
 }

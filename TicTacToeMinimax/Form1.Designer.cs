@@ -54,6 +54,7 @@ namespace TicTacToeMinimax
             this.Player2Combo = new System.Windows.Forms.ComboBox();
             this.Player1Combo = new System.Windows.Forms.ComboBox();
             this.Player2Label = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.GamePanel.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MultipleGamesNumericSelect)).BeginInit();
@@ -226,6 +227,7 @@ namespace TicTacToeMinimax
             this.MultipleGamesCheck.TabIndex = 12;
             this.MultipleGamesCheck.Text = "Run Multiple Games";
             this.MultipleGamesCheck.UseVisualStyleBackColor = true;
+            this.MultipleGamesCheck.CheckedChanged += new System.EventHandler(this.MultipleGamesCheck_CheckedChanged);
             // 
             // ResetButton
             // 
@@ -236,6 +238,7 @@ namespace TicTacToeMinimax
             this.ResetButton.TabIndex = 11;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // StartButton
             // 
@@ -264,6 +267,7 @@ namespace TicTacToeMinimax
             this.Player2NumericSelect.Name = "Player2NumericSelect";
             this.Player2NumericSelect.Size = new System.Drawing.Size(31, 20);
             this.Player2NumericSelect.TabIndex = 8;
+            this.Player2NumericSelect.ValueChanged += new System.EventHandler(this.Player2NumericSelect_ValueChanged);
             // 
             // Player1SearchLabel
             // 
@@ -281,6 +285,7 @@ namespace TicTacToeMinimax
             this.Player1NumericSelect.Name = "Player1NumericSelect";
             this.Player1NumericSelect.Size = new System.Drawing.Size(31, 20);
             this.Player1NumericSelect.TabIndex = 6;
+            this.Player1NumericSelect.ValueChanged += new System.EventHandler(this.Player1NumericSelect_ValueChanged);
             // 
             // Player2Combo
             // 
@@ -289,6 +294,7 @@ namespace TicTacToeMinimax
             this.Player2Combo.Name = "Player2Combo";
             this.Player2Combo.Size = new System.Drawing.Size(196, 21);
             this.Player2Combo.TabIndex = 5;
+            this.Player2Combo.SelectedIndexChanged += new System.EventHandler(this.Player2Combo_SelectedIndexChanged);
             // 
             // Player1Combo
             // 
@@ -297,6 +303,7 @@ namespace TicTacToeMinimax
             this.Player1Combo.Name = "Player1Combo";
             this.Player1Combo.Size = new System.Drawing.Size(196, 21);
             this.Player1Combo.TabIndex = 4;
+            this.Player1Combo.SelectedIndexChanged += new System.EventHandler(this.Player1Combo_SelectedIndexChanged);
             // 
             // Player2Label
             // 
@@ -308,16 +315,27 @@ namespace TicTacToeMinimax
             this.Player2Label.TabIndex = 3;
             this.Player2Label.Text = "Player 2:";
             // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultLabel.Location = new System.Drawing.Point(347, 477);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(117, 20);
+            this.ResultLabel.TabIndex = 9;
+            this.ResultLabel.Text = "Player 1 Wins";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.SettingsPanel);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.MainLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tic Tac Toe";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.GamePanel.ResumeLayout(false);
             this.SettingsPanel.ResumeLayout(false);
@@ -357,6 +375,7 @@ namespace TicTacToeMinimax
         private System.Windows.Forms.NumericUpDown Player1NumericSelect;
         private System.Windows.Forms.ComboBox Player2Combo;
         private System.Windows.Forms.ComboBox Player1Combo;
+        private System.Windows.Forms.Label ResultLabel;
     }
 }
 

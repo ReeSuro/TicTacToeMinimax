@@ -14,6 +14,10 @@ namespace TicTacToeMinimax
             _IsFirstPlayer = isFirstPlayer;
         }
 
+        public char[,] Decision(char[,] gameBoard)
+        {
+            throw new NotImplementedException();
+        }
 
         private void PrintBoard(char[,] gameBoard) {
 
