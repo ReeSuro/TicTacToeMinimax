@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace TicTacToeMinimax
 {
-    interface IPlayer
+    abstract class IPlayer
     {
-       char[,] Decision(char[,] gameBoard);
+        public double maxExecutionTime;
+        public double averageExecutionTime;
+        abstract public char[,] Decision(char[,] gameBoard);
     }
 }

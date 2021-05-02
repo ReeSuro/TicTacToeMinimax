@@ -14,7 +14,7 @@ namespace TicTacToeMinimax
             _IsFirstPlayer = isFirstPlayer;
         }
 
-        public char[,] Decision(char[,] gameBoard)
+        public override char[,] Decision(char[,] gameBoard)
         {
             throw new NotImplementedException();
         }

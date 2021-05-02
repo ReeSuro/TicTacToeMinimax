@@ -460,6 +460,10 @@ namespace TicTacToeMinimax
             Console.WriteLine("Player 2 type: " + Player2.GetType().Name);
             Console.WriteLine("Player 2 wins: " + totalP2Wins);
             Console.WriteLine("Total Draws: " + totalDraws);
+            Console.WriteLine("Player 1 max time per move: " + Player1.maxExecutionTime + "ms");
+            Console.WriteLine("Player 1 average time per move: " + Player1.averageExecutionTime + "ms");
+            Console.WriteLine("Player 2 max time per move: " + Player2.maxExecutionTime + "ms");
+            Console.WriteLine("Player 2 average time per move: " + Player2.averageExecutionTime + "ms");
         }
 
         private void ResetButton_Click(object sender, EventArgs e)

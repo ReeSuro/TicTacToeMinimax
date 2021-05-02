@@ -12,10 +12,13 @@ namespace TicTacToeMinimax
         public DepthLimitedTreeNode topNode;
         public int treeDepth;
 
+
         public DepthSearchPlayer(bool isfirst, int maxTreeDepth)
         {
             isFirstPlayer = isfirst;
             treeDepth = maxTreeDepth;
+            maxExecutionTime = 0;
+            averageExecutionTime = 0;
         }
 
         public void CreateTree(bool isFirstPlayer, char[,] currentBoard, int maxTreeDepth)
@@ -23,8 +26,11 @@ namespace TicTacToeMinimax
             topNode = new DepthLimitedTreeNode(currentBoard, isFirstPlayer, isFirstPlayer, maxTreeDepth, 0);
         }
 
-        public char[,] Decision(char[,] gameBoard)
+        public override char[,] Decision(char[,] gameBoard)
         {
+            //Initialise timing -
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
             //Create the tree structure 
             CreateTree(isFirstPlayer, gameBoard, treeDepth);
 
@@ -55,6 +61,17 @@ namespace TicTacToeMinimax
 
             //Return the board to be played.
             char[,] returnValue = topNode.ChildNodes.ElementAt<DepthLimitedTreeNode>(maxScoreIndex).GameBoard;
+
+            //Finish timing and calculate values
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+
+            if (elapsedMs > maxExecutionTime)
+            {
+                maxExecutionTime = elapsedMs;
+            }
+
+            averageExecutionTime = (averageExecutionTime + elapsedMs) / 2;
             //Destroy tree
             topNode = null;
             return returnValue;
